@@ -41,13 +41,9 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
   useEffect(() => {
     // Check for existing session on mount
-    console.log('AuthContext: Initializing...');
     try {
       const currentUser = authService.getCurrentUser();
-      console.log('AuthContext: Current user from service:', currentUser);
-      
       if (currentUser) {
-        console.log('AuthContext: Setting user and session');
         setSession(currentUser);
         setUser({
           id: currentUser.userId,
@@ -57,14 +53,13 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
           createdAt: currentUser.createdAt,
           lastLogin: currentUser.createdAt
         });
-      } else {
-        console.log('AuthContext: No current user found');
       }
     } catch (error) {
-      console.error('AuthContext: Error during initialization:', error);
+      // Silently handle errors and continue
+      console.warn('Auth initialization error:', error);
     }
     
-    console.log('AuthContext: Setting loading to false');
+    // Always set loading to false to prevent infinite loading
     setIsLoading(false);
 
     // Listen for logout events

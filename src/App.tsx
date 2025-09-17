@@ -12,28 +12,20 @@ const AppContent: React.FC = () => {
   const { isAuthenticated, isLoading, user, logout } = useAuth();
   const [activeTab, setActiveTab] = useState<'tasks' | 'analytics' | 'sync'>('tasks');
 
-  // Debug logging for production
-  React.useEffect(() => {
-    console.log('AppContent Debug:', { isAuthenticated, isLoading, user: !!user });
-  }, [isAuthenticated, isLoading, user]);
-
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading...</p>
+          <p className="text-gray-600">Loading your workspace...</p>
         </div>
       </div>
     );
   }
 
   if (!isAuthenticated) {
-    console.log('Rendering AuthForm - user not authenticated');
     return <AuthForm />;
   }
-
-  console.log('Rendering main app - user authenticated');
 
   const tabs = [
     { id: 'tasks', label: 'Tasks', icon: '📋' },
@@ -101,13 +93,8 @@ const AppContent: React.FC = () => {
 };
 
 function App() {
-  console.log('App: Component rendering...');
-  
   return (
-    <div>
-      <h1 style={{ position: 'fixed', top: 0, left: 0, background: 'red', color: 'white', padding: '5px', zIndex: 9999, fontSize: '12px' }}>
-        App Loaded ✅
-      </h1>
+    <div className="min-h-screen">
       <AuthProvider>
         <TaskProvider>
           <AppContent />
