@@ -12,6 +12,11 @@ const AppContent: React.FC = () => {
   const { isAuthenticated, isLoading, user, logout } = useAuth();
   const [activeTab, setActiveTab] = useState<'tasks' | 'analytics' | 'sync'>('tasks');
 
+  // Debug logging for production
+  React.useEffect(() => {
+    console.log('AppContent Debug:', { isAuthenticated, isLoading, user: !!user });
+  }, [isAuthenticated, isLoading, user]);
+
   if (isLoading) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
@@ -24,8 +29,11 @@ const AppContent: React.FC = () => {
   }
 
   if (!isAuthenticated) {
+    console.log('Rendering AuthForm - user not authenticated');
     return <AuthForm />;
   }
+
+  console.log('Rendering main app - user authenticated');
 
   const tabs = [
     { id: 'tasks', label: 'Tasks', icon: '📋' },
@@ -93,12 +101,19 @@ const AppContent: React.FC = () => {
 };
 
 function App() {
+  console.log('App: Component rendering...');
+  
   return (
-    <AuthProvider>
-      <TaskProvider>
-        <AppContent />
-      </TaskProvider>
-    </AuthProvider>
+    <div>
+      <h1 style={{ position: 'fixed', top: 0, left: 0, background: 'red', color: 'white', padding: '5px', zIndex: 9999, fontSize: '12px' }}>
+        App Loaded ✅
+      </h1>
+      <AuthProvider>
+        <TaskProvider>
+          <AppContent />
+        </TaskProvider>
+      </AuthProvider>
+    </div>
   );
 }
 
