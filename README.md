@@ -9,7 +9,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.5+-blue.svg)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-18.3+-61DAFB.svg)](https://reactjs.org/)
 [![Brolostack](https://img.shields.io/badge/Brolostack-1.0+-purple.svg)](https://github.com/Beunec/brolostack)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Beunec/brolostack_task_manager)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Beunec/brolostack_task_manager&branch=open-source)
 
 **[🌟 Live Demo](https://brolostack-task-manager.vercel.app)** | **[📖 Documentation](DEPLOYMENT.md)** | **[🔒 Security](SECURITY.md)** | **[🏆 Credits](CREDITS.md)**
 
@@ -263,8 +263,8 @@ src/
 ## 🚀 **Deployment Options**
 
 ### ⚡ **Quick Deploy**
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Beunec/brolostack_task_manager)
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Beunec/brolostack_task_manager)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Beunec/brolostack_task_manager&branch=open-source)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Beunec/brolostack_task_manager&branch=open-source)
 
 ### 🛠️ **Manual Deployment**
 ```bash
@@ -314,7 +314,7 @@ We welcome contributions from developers who want to help showcase and improve B
 
 1. **🍴 Fork the Repository**
    ```bash
-   git clone https://github.com/Beunec/brolostack_task_manager.git
+   git clone -b open-source https://github.com/Beunec/brolostack_task_manager.git
    cd brolostack_task_manager
    npm install
    ```
@@ -397,8 +397,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ### 💬 **Join the Brolostack Community**
 
-- **🐙 GitHub Discussions** - [Community Forum](https://github.com/Beunec/brolostack_task_manager/discussions)
-- **🐛 Issues & Bug Reports** - [GitHub Issues](https://github.com/Beunec/brolostack_task_manager/issues)
+- **🐙 GitHub Discussions** - [Community Forum](https://github.com/Beunec/brolostack_task_manager/tree/open-source/discussions)
+- **🐛 Issues & Bug Reports** - [GitHub Issues](https://github.com/Beunec/brolostack_task_manager/tree/open-source/issues)
 - **📧 Email Support** - [support@beunec.co](mailto:support@beunec.co)
 - **🔒 Security Issues** - [security@beunec.co](mailto:security@beunec.co)
 
@@ -452,7 +452,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ## 🚀 **Ready to Build with Brolostack?**
 
-**[🌟 Try the Live Demo](https://brolostack-task-manager.vercel.app)** | **[🚀 Deploy Your Own](https://vercel.com/new/clone?repository-url=https://github.com/Beunec/brolostack_task_manager)** | **[📖 Read the Docs](https://github.com/Beunec/brolostack)**
+**[🌟 Try the Live Demo](https://brolostack-task-manager.vercel.app)** | **[🚀 Deploy Your Own](https://vercel.com/new/clone?repository-url=https://github.com/Beunec/brolostack_task_manager&branch=open-source)** | **[📖 Read the Docs](https://github.com/Beunec/brolostack)**
 
 ### **Built with ❤️ by [Beunec Technologies, Inc.](https://beunec.co)**
 
@@ -460,7 +460,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 **Brolostack Task Manager** - *Showcasing the future of zero-cost, full-stack web development*
 
-[![GitHub stars](https://img.shields.io/github/stars/Beunec/brolostack_task_manager?style=social)](https://github.com/Beunec/brolostack_task_manager)
+[![GitHub stars](https://img.shields.io/github/stars/Beunec/brolostack_task_manager?style=social)](https://github.com/Beunec/brolostack_task_manager/tree/open-source)
 [![Follow Beunec](https://img.shields.io/twitter/follow/BeunecOfficial?style=social)](https://twitter.com/BeunecOfficial)
 
 </div>
