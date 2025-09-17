@@ -56,7 +56,6 @@
       "NODE_ENV": "production"
     }
   },
-  "functions": {},
   "regions": ["iad1"],
   "github": {
     "autoDeployment": true,
